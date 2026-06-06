@@ -1,0 +1,42 @@
+
+=================================================================
+  BAYER AG — CLINICAL DECISION SUPPORT
+  Heart Disease Risk Prediction Report
+  Dataset: UCI Cleveland Heart Disease (303 patients)
+  Generated: 2026-06-06 22:00
+=================================================================
+
+MODEL RESULTS (Random Forest — 500 trees)
+  Accuracy   : 0.8333
+  Precision  : 0.8214
+  Recall     : 0.8214  <- KEY metric (catching real cases)
+  F1 Score   : 0.8214
+  ROC-AUC    : 0.9408
+  CV AUC     : 0.8965 +/- 0.0445
+
+CLINICAL SIMULATION (60 test patients)
+  Correctly caught disease cases  : 23
+  Missed disease cases (DANGEROUS): 5
+  Correctly cleared healthy cases : 27
+  Unnecessary follow-ups          : 5
+  Catch rate                      : 82.1%
+
+TOP PREDICTORS
+  -> ST depression (oldpeak)
+  -> Max heart rate (thalach)
+  -> Blocked vessels (ca)
+  -> Combined clinical risk score
+
+BUSINESS IMPACT
+  -> Earlier detection = better patient outcomes
+  -> Supports Bayer cardiovascular drug trial patient selection
+  -> GDPR-compliant clinical decision support tool for Germany
+  -> Scalable to European patient datasets
+
+RECOMMENDATIONS
+  1. Deploy as clinical screening tool in cardiology
+  2. Lower threshold to 0.4 to increase recall further
+  3. Validate on German/European patient data
+  4. Add SHAP values for individual patient explanations
+  5. Integrate with hospital EHR systems via API
+=================================================================
